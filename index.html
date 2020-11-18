@@ -81,8 +81,10 @@
       document.getElementById("accessToken").append(liff.getAccessToken())
       document.getElementById("isInClient").append(liff.getisInClient())
       if(liff.getisInClient()){
+        alert("In")
         document.getElementById("btnLogOut").style.display = "none"
       }else{
+        alert("Out")
         document.getElementById("btnMsg").style.display = "none"
         document.getElementById("btnScanCode").style.display = "none"
         document.getElementById("btnClose").style.display = "none"
