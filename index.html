@@ -54,9 +54,12 @@
     }
 
     function closed() {
+      liff.closeWindow()
     }
 
     async function scanCode() {
+      const result = await liff.scanCode()
+      document.getElementById("btnScanCode").append(result.value)
     }
 
     function openWindow() {
