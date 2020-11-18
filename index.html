@@ -48,6 +48,12 @@
     }
 
     async function shareMsg() {
+      await liff.shareTagetPicker([
+        {
+          "type":"text",
+          "text":"This message was sent by TagetPicker"
+        }
+      ])
     }
 
     function logOut() {
@@ -79,7 +85,6 @@
           window.location = "https://line.me/R/ti/p/%40639klpan"
         }
       }
-      // friendship
     }
 
     async function sendMsg() {
