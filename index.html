@@ -63,6 +63,14 @@
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+      document.getElementById("friendship").append(friend.friendFlag)
+      if(!friend.friendFlag){
+        if(confirm("คุณยังไม่ได้เป็นเพื่อนกับ bot จะเพิ่มตอนนี้เลยไหม?")){
+          window.location = "https://timeline.line.me/user/_dfwAFE20dihvxGkGb1Ah1vhzT-b0nLF84paACkA?utm_medium=windows&utm_source=desktop&utm_campaign=OA_Profile"
+        }
+      }
+      // friendship
     }
 
     async function sendMsg() {
@@ -115,7 +123,7 @@
       getEnvironment()
       getUserProfile()
       getContext()
-      // getFriendship()
+      getFriendship()
       // createUniversalLink()
     }
     main()
